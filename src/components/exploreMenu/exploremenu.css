@@ -1,0 +1,132 @@
+.explore-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.explore-menu h1 {
+    color: #262626;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.explore-menu-text {
+    max-width: 60%;
+    color: #808080;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.explore-menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0;
+    overflow-x: auto;
+    padding: 10px 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.explore-menu-list::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.explore-menu-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    min-width: 100px;
+}
+
+.explore-menu-list-item:hover {
+    transform: translateY(-2px);
+}
+
+.explore-menu-list-item img {
+    width: 7.5vw;
+    min-width: 80px;
+    max-width: 120px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.explore-menu-list-item img.active {
+    border: 2px solid #ff6347;
+    padding: 2px;
+    box-shadow: 0 4px 8px rgba(255, 99, 71, 0.3);
+}
+
+.explore-menu-list-item p {
+    margin-top: 10px;
+    color: #747474;
+    font-size: max(1.4vw, 16px);
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.explore-menu-list-item:hover p {
+    color: #262626;
+}
+
+.explore-menu hr {
+    margin: 10px 0;
+    height: 2px;
+    background-color: #e2e2e2;
+    border: none;
+    border-radius: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .explore-menu h1 {
+        font-size: 2rem;
+    }
+    
+    .explore-menu-text {
+        max-width: 90%;
+        font-size: 1rem;
+    }
+    
+    .explore-menu-list {
+        gap: 20px;
+        justify-content: flex-start;
+    }
+    
+    .explore-menu-list-item img {
+        width: 60px;
+        min-width: 60px;
+    }
+    
+    .explore-menu-list-item p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-menu-list {
+        gap: 15px;
+    }
+    
+    .explore-menu-list-item img {
+        width: 50px;
+        min-width: 50px;
+    }
+    
+    .explore-menu-list-item p {
+        font-size: 12px;
+    }
+}

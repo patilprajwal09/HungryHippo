@@ -1,0 +1,124 @@
+.place_order{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 100px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.place_order_left{
+    width: 100%;
+    max-width: max(30%,500px);
+}
+
+.place_order_left .title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.place_order_left input{
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 6px;
+    outline-color: tomato;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.place_order_left input:focus {
+    border-color: #ff6347;
+    box-shadow: 0 0 0 2px rgba(255, 99, 71, 0.15);
+}
+
+.place_order_left input:disabled {
+    background: #f5f5f5;
+    color: #aaa;
+}
+
+.place_order_left .multi_fields{
+    display: flex;
+    gap: 10px;
+}
+
+.place_order_right{
+    width: 100%;
+    max-width: max(40%,500px);
+}
+
+.place_order .cart_total button{
+    margin-top: 30px;
+    border: none;
+    color: white;
+    background-color: tomato;
+    width: 100%;
+    padding: 14px 0px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s, opacity 0.2s;
+}
+
+.place_order .cart_total button:disabled,
+.place_order .cart_total button.disabled {
+    background: #e0e0e0;
+    color: #aaa;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.place_order .cart_total button:hover:not(:disabled) {
+    background-color: #e55a3f;
+}
+
+.place_order .cart_total button:focus {
+    outline: 2px solid #ff6347;
+    outline-offset: 2px;
+}
+
+.order-error {
+    color: #d32f2f;
+    background: #ffebee;
+    border-radius: 6px;
+    margin: 10px 0 0 0;
+    padding: 10px 14px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .place_order {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 10px;
+    }
+    .place_order_left, .place_order_right {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .place_order {
+        margin-top: 60px;
+        gap: 24px;
+        padding: 0 4px;
+    }
+    .place_order_left .title {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    .place_order_left input {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+    .place_order .cart_total button {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+}
